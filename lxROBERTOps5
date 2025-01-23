@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = " ROBERTOo",
+   Name = "رـوـبيرتوxليــثـxفـويـد",
    Icon = 89329261427843, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "ALSHABA7 Voiid",
    LoadingSubtitle = "Made By Voiid!",
@@ -170,4 +170,150 @@ local Button = Tab:CreateButton({
    end,
 })
 
-local Tab = Window:CreateTab("Random Script
+local Tab = Window:CreateTab("Random Scripts", 80203996981387) -- Title, Image
+
+local Section = Tab:CreateSection("سكربتات منوعه *ممكن تشتغل فماب البيوت*")
+
+local Button = Tab:CreateButton({
+   Name = "VR7 سكربت تاج معرب",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20RAGDOLL"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Invisible 1 اختفاء",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Invisible 2 اختفاء",
+   Callback = function()
+   loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Fling Script 1",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Fling Script 2",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-gui-script-13229"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Notify If Someone Leave - Joins",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "FPS Booster",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+_G.Ignore = {}
+_G.Settings = {
+	Players = {
+		["Ignore Me"] = true,
+		["Ignore Others"] = true,
+		["Ignore Tools"] = true
+	},
+	Meshes = {
+		NoMesh = false,
+		NoTexture = false,
+		Destroy = false
+	},
+	Images = {
+		Invisible = true,
+		Destroy = false
+	},
+	Explosions = {
+		Smaller = true,
+		Invisible = false, -- Not for PVP games
+		Destroy = false -- Not for PVP games
+	},
+	Particles = {
+		Invisible = true,
+		Destroy = false
+	},
+	TextLabels = {
+		LowerQuality = true,
+		Invisible = false,
+		Destroy = false
+	},
+	MeshParts = {
+		LowerQuality = true,
+		Invisible = false,
+		NoTexture = false,
+		NoMesh = false,
+		Destroy = false
+	},
+	Other = {
+		["FPS Cap"] = 360, -- true to uncap
+		["No Camera Effects"] = true,
+		["No Clothes"] = true,
+		["Low Water Graphics"] = true,
+		["No Shadows"] = true,
+		["Low Rendering"] = true,
+		["Low Quality Parts"] = true,
+		["Low Quality Models"] = true,
+		["Reset Materials"] = true,
+	}
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Voiid Fly GUI V3",
+   Callback = function()
+   loadstring(game:HttpGet('https://pastebin.com/raw/VgGGWeNH'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Fly Gui V3 Modded",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-Gui-Modded-10763"))()
+   end,
+})
+
+local Tab = Window:CreateTab("BONUS", 96509056170213) -- Title, Image
+
+local Section = Tab:CreateSection("سكربتات مفيدة")
+
+local Button = Tab:CreateButton({
+   Name = "Chat Protection حماية من باند السبام",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "FE Illusion سكربت تفادي بانق",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Illusion-Script-12744"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Read Me Lol", 96509056170213) -- Title, Image
+
+local Section = Tab:CreateSection("المطورين")
+
+local Section = Tab:CreateSection("روبيرتو")
+local Section = Tab:CreateSection("ليث")
+local Section = Tab:CreateSection("فويد")
