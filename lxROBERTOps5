@@ -1,4 +1,4 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+llocal Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "رـوـبيرتوxليــثـxفـويـد",
@@ -36,7 +36,7 @@ local Window = Rayfield:CreateWindow({
 
 Rayfield:Notify({
    Title = "Welcome To My Script!",
-   Content = "This Script Made Specially For You And ALSHABA7 Clan",
+   Content = "ROBERTO",
    Duration = 5,
    Image = 110139412486838,
 })
@@ -46,7 +46,7 @@ local Tab = Window:CreateTab("AntiAFK Scripts", 89329261427843) -- Title, Image
 local Section = Tab:CreateSection("سكربتات صمله")
 
 local Button = Tab:CreateButton({
-   Name = "LordVoiid AntiAFK OP",
+   Name = "صمله صنع فويد",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/XxAbood/Anti-Afk-Script-By-LordVoiid/refs/heads/main/AntiafkByLordVoiid"))()
    end,
