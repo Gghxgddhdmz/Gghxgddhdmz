@@ -192,10 +192,10 @@ local Tab = Window:CreateTab("Random Scripts", 80203996981387) -- Title, Image
 local Section = Tab:CreateSection("سكربتات منوعه *ممكن تشتغل فماب البيوت*")
 
 local Button = Tab:CreateButton({
-   Name = "VR7 سكربت تاج معرب",
+   Name = "VR7 تحديث الجديد سكربت تاج معرب",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20RAGDOLL"))()
-   end,
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/refs/heads/main/VR7-ON-TOP"))()
+  end,
 })
 
 local Button = Tab:CreateButton({
@@ -293,9 +293,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord
 })
 
 local Button = Tab:CreateButton({
-   Name = "Voiid Fly GUI V3",
+   Name = "سكربت FPS",
    Callback = function()
-   loadstring(game:HttpGet('https://pastebin.com/raw/VgGGWeNH'))()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/vexroxd/My-Script-/main/roblox%20fps%20unlocker%20script.lua'))()
    end,
 })
 
@@ -326,9 +326,3 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Illusion-Script-12744"))()
    end,
 })
-
-local Tab = Window:CreateTab("Read Me Lol", 96509056170213) -- Title, Image
-
-local Section = Tab:CreateSection("Thank You For using My Script! :D")
-
-local Section = Tab:CreateSection("سكربتي افضل من داني ههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههههه")
