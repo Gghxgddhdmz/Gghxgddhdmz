@@ -1,332 +1,172 @@
-llocal Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+-- Gui to Lua
+-- Version: 3.2
 
-local Window = Rayfield:CreateWindow({
-   Name = "رـوـبيرتوxليــثـxفـويـد",
-   Icon = 89329261427843, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "ALSHABA7 Voiid",
-   LoadingSubtitle = "Made By Voiid!",
-   Theme = "Ocean", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+-- Utility function to create UICorner
+local function addCorner(instance, cornerRadius)
+    local UICorner = Instance.new("UICorner")
+    UICorner.CornerRadius = cornerRadius or UDim.new(0, 4)
+    UICorner.Parent = instance
+end
 
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+-- Utility function to create TextButton
+local function createTextButton(parent, position, size, text)
+    local button = Instance.new("TextButton")
+    button.Parent = parent
+    button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    button.BorderSizePixel = 0
+    button.Position = position
+    button.Size = size
+    button.Font = Enum.Font.SourceSansBold
+    button.Text = text
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.TextSize = 10
+    addCorner(button)
+    return button
+end
 
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Alshaba7 HUB"
-   },
+-- Function to execute Lua script dynamically
+local function executeScript(scriptText)
+    local success, result = pcall(function()
+        loadstring(scriptText)()  -- Dynamically execute the script passed as text
+    end)
+    
+    if success then
+        print("Script executed successfully")
+    else
+        print("Error executing script: " .. result)
+    end
+end
 
-   Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
+-- Function to copy link to clipboard
+local function copyToClipboard(link)
+    setclipboard(link)  -- Copies the provided link to clipboard
+    print("Link copied: " .. link)
+end
 
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
-})
+-- Instances:
 
-Rayfield:Notify({
-   Title = "Welcome To My Script!",
-   Content = "ROBERTO",
-   Duration = 5,
-   Image = 110139412486838,
-})
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame1 = Instance.new("Frame")
+local execute2 = Instance.new("ImageButton")
+local ImageLabel = Instance.new("ImageLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local execute1 = Instance.new("ImageButton")
+local TextLabel = Instance.new("TextLabel")
+local close = Instance.new("ImageButton")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local copylink1 = createTextButton(Frame, UDim2.new(0.743, 0, 0.481, 0), UDim2.new(0, 90, 0, 40), "Click Here To Copy Link")
+local copylink2 = createTextButton(Frame, UDim2.new(0.743, 0, 0.767, 0), UDim2.new(0, 90, 0, 40), "Click Here To Copy Link")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local copylink3 = createTextButton(Frame, UDim2.new(0.743, 0, 0.249, 0), UDim2.new(0, 90, 0, 40), "Click Here To Copy Link")
 
-local Tab = Window:CreateTab("AntiAFK Scripts", 89329261427843) -- Title, Image
+-- Properties:
 
-local Section = Tab:CreateSection("سكربتات صمله")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-local Button = Tab:CreateButton({
-   Name = "صمله صنع فويد",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/XxAbood/Anti-Afk-Script-By-LordVoiid/refs/heads/main/AntiafkByLordVoiid"))()
-   end,
-})
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.3
+Frame.BorderColor3 = Color3.fromRGB(0, 255, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.409, 0, 0.381, 0)
+Frame.Size = UDim2.new(0, 394, 0, 245)
+addCorner(Frame)
 
-local Button = Tab:CreateButton({
-   Name = "AntiAFK V2",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Anti-Afk-Remastered-Script-or-Diffrent-Cool-UI-2097"))()
-   end,
-})
+-- Subframe for execute buttons and images
+Frame1.Parent = Frame
+Frame1.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Frame1.Position = UDim2.new(0, 0, 0.211, 0)
+Frame1.Size = UDim2.new(0, 140, 0, 193)
+addCorner(Frame1)
 
-local Button = Tab:CreateButton({
-   Name = "AntiAFK By hassanxzayn",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-script-18076"))()
-   end,
-})
+-- Execute button 2
+execute2.Parent = Frame1
+execute2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+execute2.BorderSizePixel = 0
+execute2.Position = UDim2.new(0.679, 0, 0.088, 0)
+execute2.Size = UDim2.new(0, 39, 0, 36)
+execute2.Image = "rbxassetid://83849781268173"
+addCorner(execute2)
 
-local Button = Tab:CreateButton({
-   Name = "AntiAFK By getmepink",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/brosula123/Anti-afk/main/Bl%C3%B8xzScript"))()
-   end,
-})
+-- ImageLabel 1
+ImageLabel.Parent = Frame1
+ImageLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.Position = UDim2.new(0.136, 0, 0.088, 0)
+ImageLabel.Size = UDim2.new(0, 63, 0, 38)
+ImageLabel.Image = "rbxassetid://92405407101520"
+addCorner(ImageLabel)
 
-local Button = Tab:CreateButton({
-   Name = "AntiAFK KongerHub",
-   Callback = function()
-   loadstring(game:HttpGet("https://zxfolix.github.io/antiafk.lua"))()
-   end,
-})
+-- ImageLabel 2
+ImageLabel_2.Parent = Frame1
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.Position = UDim2.new(0.136, 0, 0.352, 0)
+ImageLabel_2.Size = UDim2.new(0, 63, 0, 38)
+ImageLabel_2.Image = "rbxassetid://135165944371045"
+addCorner(ImageLabel_2)
 
-local Button = Tab:CreateButton({
-   Name = "AntiAFK Advanced With Spam",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz", true))()
-   end,
-})
+-- Execute button 1
+execute1.Parent = Frame1
+execute1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+execute1.BorderSizePixel = 0
+execute1.Position = UDim2.new(0.679, 0, 0.352, 0)
+execute1.Size = UDim2.new(0, 39, 0, 36)
+execute1.Image = "rbxassetid://83849781268173"
+addCorner(execute1)
 
-local Tab = Window:CreateTab("BrookHaven Scripts", 132680152916449) -- Title, Image
+-- Title TextLabel
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Size = UDim2.new(0, 393, 0, 52)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Sander X Panel"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 15
+addCorner(TextLabel)
 
-local Section = Tab:CreateSection("سكربتات ماب البيوت")
+-- Close Button with functionality to close the panel
+close.Parent = Frame
+close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+close.Position = UDim2.new(0.893, 0, 0.039, 0)
+close.Size = UDim2.new(0, 31, 0, 31)
+close.Image = "rbxassetid://140052211580318"
+close.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()  -- Usuwa cały ScreenGui, zamykając interfejs
+end)
 
-local Button = Tab:CreateButton({
-   Name = "Infinite Yield",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-   end,
-})
+-- Other Images
+ImageLabel_3.Parent = Frame
+ImageLabel_3.Position = UDim2.new(0.373, 0, 0.731, 0)
+ImageLabel_3.Size = UDim2.new(0, 136, 0, 58)
+ImageLabel_3.Image = "rbxassetid://87096536019651"
 
-local Button = Tab:CreateButton({
-   Name = "Nameless Admin Script",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
-   end,
-})
+ImageLabel_4.Parent = Frame
+ImageLabel_4.Position = UDim2.new(0.363, 0, 0.427, 0)
+ImageLabel_4.Size = UDim2.new(0, 140, 0, 67)
+ImageLabel_4.Image = "rbxassetid://92628353225469"
 
-local Button = Tab:CreateButton({
-   Name = "Atomic Hub",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
-   end,
-})
+ImageLabel_5.Parent = Frame
+ImageLabel_5.Position = UDim2.new(0.373, 0, 0.249, 0)
+ImageLabel_5.Size = UDim2.new(0, 136, 0, 35)
+ImageLabel_5.Image = "rbxassetid://110885655073504"
 
-local Button = Tab:CreateButton({
-   Name = "R4D Hub",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
-   end,
-})
+execute2.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/NormalSS.lua'))()
+end)
 
-local Button = Tab:CreateButton({
-   Name = "Ghost Hub",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
-   end,
-})
+execute1.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/sanderxvipSS.lua'))()
+end)
 
-local Button = Tab:CreateButton({
-   Name = "Rochips Universal",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
-   end,
-})
+-- Function to copy the link when clicked
+copylink1.MouseButton1Click:Connect(function()
+    local link1 = "https://www.roblox.com/pl/catalog/80680383943488/Sander-X-SanderDev-Shirt"
+    copyToClipboard(link1)  -- Copy link1 to clipboard
+end)
 
-local Button = Tab:CreateButton({
-   Name = "F0rtuit0us Hub (OP)",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/TrollGuiMaker/f0rtuit0us-hub/refs/heads/main/old"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Sander X NEW UPDATE",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-x-22769"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "YIN Hub",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Yin-Hub-21835"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Vex Hub",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/discord.com/invite/3NN5zTW7h2"))()
-   end,
-})
-
-local Tab = Window:CreateTab("Random Scripts", 80203996981387) -- Title, Image
-
-local Section = Tab:CreateSection("سكربتات منوعه *ممكن تشتغل فماب البيوت*")
-
-local Button = Tab:CreateButton({
-   Name = "VR7 سكربت تاج معرب",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20RAGDOLL"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Invisible 1 اختفاء",
-   Callback = function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Invisible 2 اختفاء",
-   Callback = function()
-   loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Fling Script 1",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Fling Script 2",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-gui-script-13229"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Notify If Someone Leave - Joins",
-   Callback = function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "FPS Booster",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-_G.Ignore = {}
-_G.Settings = {
-	Players = {
-		["Ignore Me"] = true,
-		["Ignore Others"] = true,
-		["Ignore Tools"] = true
-	},
-	Meshes = {
-		NoMesh = false,
-		NoTexture = false,
-		Destroy = false
-	},
-	Images = {
-		Invisible = true,
-		Destroy = false
-	},
-	Explosions = {
-		Smaller = true,
-		Invisible = false, -- Not for PVP games
-		Destroy = false -- Not for PVP games
-	},
-	Particles = {
-		Invisible = true,
-		Destroy = false
-	},
-	TextLabels = {
-		LowerQuality = true,
-		Invisible = false,
-		Destroy = false
-	},
-	MeshParts = {
-		LowerQuality = true,
-		Invisible = false,
-		NoTexture = false,
-		NoMesh = false,
-		Destroy = false
-	},
-	Other = {
-		["FPS Cap"] = 360, -- true to uncap
-		["No Camera Effects"] = true,
-		["No Clothes"] = true,
-		["Low Water Graphics"] = true,
-		["No Shadows"] = true,
-		["Low Rendering"] = true,
-		["Low Quality Parts"] = true,
-		["Low Quality Models"] = true,
-		["Reset Materials"] = true,
-	}
-}
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Voiid Fly GUI V3",
-   Callback = function()
-   loadstring(game:HttpGet('https://pastebin.com/raw/VgGGWeNH'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Fly Gui V3 Modded",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-Gui-Modded-10763"))()
-   end,
-})
-
-local Tab = Window:CreateTab("BONUS", 96509056170213) -- Title, Image
-
-local Section = Tab:CreateSection("سكربتات مفيدة")
-
-local Button = Tab:CreateButton({
-   Name = "Chat Protection حماية من باند السبام",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "FE Illusion سكربت تفادي بانق",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Illusion-Script-12744"))()
-   end,
-})
-
-local Tab = Window:CreateTab("Read Me Lol", 96509056170213) -- Title, Image
-
-local Section = Tab:CreateSection("المطورين")
-
-local Section = Tab:CreateSection("روبيرتو")
-local Section = Tab:CreateSection("ليث")
-local Section = Tab:CreateSection("فويد")
-
-local Section = Tab:CreateSection("بلوكس فروت")
-
-local Button = Tab:CreateButton({
-   Name = "ريدز الاقوى",
-   Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
-end,
-})
-local Button = Tab:CreateButton({
-   Name = "جوست",
-   Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+copylink2.MouseButton1Click:Connect(function()
+    local link2 = "https://www.roblox.com/pl/users/3016844381/profile"
+    copyToClipbo
