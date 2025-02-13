@@ -34,16 +34,28 @@ local Section = Tab:AddSection({
 Name = <string> - The name of the section.
 ]]
 
-OrionLib:MakeNotification({
-	Name = "صمله 1!",
-	Content = "Notification content... what will it say??",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+Tab:AddButton({
+	Name = "صمله 1 😹🤙!",
+	Callback = function()
+      		print("button pressed")
+  	end    
 })
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-v-AntiKick-V3-v-Kick-Attempt-Logger-27977"))()
+
 --[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
 ]]
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-v-AntiKick-V3-v-Kick-Attempt-Logger-27977"))()
+
+Tab:AddButton({
+	Name = " .شغله وانت ساكت!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
