@@ -37,20 +37,20 @@ Name = <string> - The name of the section.
 Tab:AddButton({
 	Name = "صمله 1 😹🤙!",
 	Callback = function()
-      		print("button pressed")
-  	end    
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-v-AntiKick-V3-v-Kick-Attempt-Logger-27977"))()
+end    
 })
 
 --[[
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-v-AntiKick-V3-v-Kick-Attempt-Logger-27977"))()
+
 
 Tab:AddButton({
 	Name = " .شغله وانت ساكت!",
 	Callback = function()
-      		print("button pressed")
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
   	end    
 })
 
@@ -58,4 +58,15 @@ Tab:AddButton({
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+
+Tab:AddButton({
+	Name = " .شغله وانت ساكت!",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
