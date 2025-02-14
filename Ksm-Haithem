@@ -114,3 +114,76 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main
   	end    
 })
 
+Tab:AddButton({
+	Name = "صمله5",
+	Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-script-18076"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "صمله6",
+	Callback = function()
+loadstring(game:HttpGet("https://zxfolix.github.io/antiafk.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "صمله7",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz", true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "صمله تحكم تلقائي8",
+	Callback = function()
+loadstring(game:GetObjects("rbxassetid://15050819751")[1].Source)()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "سكربتات منوعه",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = " ولك يهيثم يزبال كسمك "
+})
+
+Tab:AddButton({
+	Name = "سكربت تحكم منظور اللاعب",
+	Callback = function()
+
+  	end    
+})
+
+Tab:AddButton({
+	Name = "لوكك",
+	Callback = function()
+
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "مىص",
+	Callback = function()
+
+  	end    
+})
+
+Tab:AddButton({
+	Name = "كل شيء",
+	Callback = function()
+
+  	end    
+})
+
+Tab:AddButton({
+	Name = "فلانج",
+	Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-gui-script-13229"))()
+  	end    
+})
