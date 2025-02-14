@@ -93,4 +93,24 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/brosula123/Anti-afk/m
   	end    
 })
 
+Tab:AddButton({
+	Name = "اختفاء",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "سكربت التاج",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20RAGDOLL"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ايذا احد طلع يجيك اشعار",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
+  	end    
+})
 
