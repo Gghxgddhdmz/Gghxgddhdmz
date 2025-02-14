@@ -245,46 +245,50 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-	Name = "سكربت الطيران",
+	Name = "سندر هوب",
 	Callback = function()
-      	loadstring(game:HttpGet("https://pastebin.com/raw/LweTKcZA"))()
-OrionLib:MakeNotification({
-})
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-x-22769"))()
   	end    
 })
+
 Tab:AddButton({
-	Name = "سكربت يطير الناس",
+	Name = "vex hub",
 	Callback = function()
-      		loadstring(game:HttpGet('https://pastebin.com/raw/TXMNj1yy'))()
-OrionLib:MakeNotification({
-	end    
-})
-Tab:AddButton({
-	Name = "سكربت نسخ السكنات",
-	Callback = function()
-      		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rael-Hub-27610"))()
-OrionLib:MakeNotification({
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/discord.com/invite/3NN5zTW7h2"))()
   	end    
 })
+
 Tab:AddButton({
-	Name = "سكربت التخريب",
+	Name = "YIN HUB",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/refs/heads/main/VR7-ON-TOP"))()
-OrionLib:MakeNotification({
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Yin-Hub-21835"))()
   	end    
 })
+
 Tab:AddButton({
-	Name = "سكربت الرحمة",
+	Name = "Fortuitous",
 	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
-OrionLib:MakeNotification({
+loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Yin-Hub-21835"))()
   	end    
 })
+
 Tab:AddButton({
-	Name = "سكربت الأدوات (نادررررر🔥)",
+	Name = "R4D",
 	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/Other-Scripts/main/Brook%20Haven%20Gui'))()
-OrionLib:MakeNotification({
-	end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
+         end
 })
- 
+
+Tab:AddButton({
+	Name = "نسخ سكنات",
+	Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ادمن",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+  	end    
+})
