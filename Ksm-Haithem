@@ -187,3 +187,86 @@ Tab:AddButton({
 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-gui-script-13229"))()
   	end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "كسمك يهيثم يبن قحبه",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "بلو لوك",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/fo/refs/heads/main/ot"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "بلوكس فروت 1",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1st-Mars/Annie/main/1st.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "بلوكس فروت 2",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xlostpexz/dasdokasdias/Fps/Loading.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "بلوكس فروت 3",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "بلوكس 4",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xlostpexz/dasdokasdias/Fps/Loading.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "بلوكس فروت 5",
+	Callback = function()
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+getgenv().Key = "هنا المفتاح " 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "اخر شيء",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "كسمك يبن القحبهه يهيثم الفرخخخخخ" 
+	
+}) 
+
+local Section = Tab:AddSection({
+	Name = "  صنع روبيرتو " 
+
+}) 
+
+local Section = Tab:AddSection({
+	Name = "Tik hasss71" 
+
+}) 
+
+local Section = Tab:AddSection({
+	Name = "Roblox botrasba" 
+
+}) 
+
+local Section = Tab:AddSection({
+	Name = "دائماً وابداً هيثم فىرخ" 
+
+}) 
+
+OrionLib:Init()
