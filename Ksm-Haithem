@@ -249,10 +249,6 @@ Tab:AddButton({
 	Callback = function()
       	loadstring(game:HttpGet("https://pastebin.com/raw/LweTKcZA"))()
 OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : الطيران",
-	Image = "rbxassetid://4483345998",
-	Time = 10
 })
   	end    
 })
@@ -261,23 +257,13 @@ Tab:AddButton({
 	Callback = function()
       		loadstring(game:HttpGet('https://pastebin.com/raw/TXMNj1yy'))()
 OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : يطير الناس",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-  	end    
+	end    
 })
 Tab:AddButton({
 	Name = "سكربت نسخ السكنات",
 	Callback = function()
       		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rael-Hub-27610"))()
 OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : نسخ السكنات",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
   	end    
 })
 Tab:AddButton({
@@ -285,11 +271,6 @@ Tab:AddButton({
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/refs/heads/main/VR7-ON-TOP"))()
 OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : التخريب",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
   	end    
 })
 Tab:AddButton({
@@ -297,11 +278,6 @@ Tab:AddButton({
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
 OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : الرحمة",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
   	end    
 })
 Tab:AddButton({
@@ -309,108 +285,6 @@ Tab:AddButton({
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/Other-Scripts/main/Brook%20Haven%20Gui'))()
 OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : الأدوات",
-	Image = "rbxassetid://4483345998",
-	Time = 10
+	end
 })
-  	end    
-})
-Tab:AddButton({
-	Name = "سكربت الهلال",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Ndora1/Ndora1/main/Nokia%20Hub.lua'))()
-OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : الهلال",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-  	end    
-})
-
-Tab:AddButton({
-	Name = "سكربت شادو",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/realgengar/scripts/refs/heads/main/Gui%20Version.Lua"))() 
-OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : شادو",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-  	end    
-})
-
-Tab:AddButton({
-	Name = "7XP سكربت",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/alotibis/7XP.lua/refs/heads/main/7XP"))()
-OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "7XP : سكربت",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-  	end    
-})
-
-Tab:AddButton({
-	Name = "سكربت ساندر",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/sXPiterXs1111/SanderXV2.9/main/Brookhaven.lua'))()
-OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : ساندر",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-  	end    
-})
-
-Tab:AddButton({
-	Name = "R4D سكربت",
-	Callback = function()
-      		loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-script-no-key-17562"))()
-OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "R4D : سكربت",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-  	end    
-})
-
-local Tab = Window:MakeTab({
-	Name = "اخرى",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Section = Tab:AddSection({
-	Name = "سكربتات مختلفه"
-})
-
-Tab:AddButton({
-	Name = "سكربت اغاني",
-	Callback = function()
-      		loadstring(game:HttpGet(("https://pastebin.com/raw/hX9ECeaM"), true))()
-OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : اغاني",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-  	end    
-})
-
-Tab:AddButton({
-	Name = "سكربت رقصات",
-	Callback = function()
-      		loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-all-emotes-6849"))()
-OrionLib:MakeNotification({
-	Name = "تم تفعيل السكربت بنجاح",
-	Content = "سكربت : رقصات",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
-  	end
+ 
