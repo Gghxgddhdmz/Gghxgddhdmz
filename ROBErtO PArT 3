@@ -474,12 +474,4 @@ Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
 
-local Tab = Window:MakeTab({
-	Name = "اخر شيء",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = Tab:AddSection({
-	Name = "Tik hasss71"
 OrionLib:Init()
