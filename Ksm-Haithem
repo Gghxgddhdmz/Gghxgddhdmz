@@ -380,3 +380,97 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 --[[
 Name = <string> - The name of the section.
 ]]
+
+Tab:AddButton({
+	Name = "سكربت ام ام تو 1!",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script",true))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "mm2 2!",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2_V2"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "mm2 3!",
+	Callback = function()
+      		loadstring(game:HttpGet"https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2")("https://t.me/arceusxscripts")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "mm2 4!",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/rblxscriptsnet/rblxhub/main/rblxhub.lua"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+local Tab = Window:MakeTab({
+	Name = "blead ball",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+Tab:AddButton({
+	Name = "blaedball 1!",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/AutoBlock"))()
+  	end    
+})
+
+--[[
+
+Tab:AddButton({
+	Name = "blaedball 2!",
+	Callback = function()
+      		loadstring(game:HttpGet('https://darkscripts.space/scripts/9e416175-701e-4e10-9bc1-71936c84bb96_1183634443747987468.lua',true))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "blade ball 3!",
+	Callback = function()
+      	  loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
