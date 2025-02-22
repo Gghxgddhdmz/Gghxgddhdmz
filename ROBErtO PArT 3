@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "  سكربت قيد تطوير  ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "ROBERTO PART 3", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -15,7 +15,7 @@ CloseCallback = <function> - Function to execute when the window is closed.
 ]]
 
 local Tab = Window:MakeTab({
-	Name = "كسمك يهيثم يبن قحبه",
+	Name = "سكربتات صمله",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -481,23 +481,5 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "  صنع روبيرتو " 
-
-}) 
-
-local Section = Tab:AddSection({
-	Name = "Tik hasss71" 
-
-}) 
-
-local Section = Tab:AddSection({
-	Name = "Roblox botrasba" 
-
-}) 
-
-local Section = Tab:AddSection({
-	Name = "دائماً وابداً هيثم فىرخ" 
-
-}) 
-
+	Name = "Tik hasss71"
 OrionLib:Init()
