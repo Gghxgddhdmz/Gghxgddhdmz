@@ -476,7 +476,7 @@ Callback = <function> - The function of the button.
 
 Tab:AddColorpicker({
 	Name = "Colorpicker",
-	Default = Color3.fromRGB(255, 0, 0),
+	Default = Color3.fromRGB(255, 189, 189),
 	Callback = function(Value)
 		print(Value)
 	end	  
