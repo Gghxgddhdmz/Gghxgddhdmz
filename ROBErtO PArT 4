@@ -20,23 +20,6 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-}
-  }
-})
-MinimizeButton({
-  Image = "rbxassetid://15876205400",
-  Size = {50, 50},
-  Color = Color3.fromRGB(10, 10, 10),
-  Corner = true,
-  Stroke = false,
-  StrokeColor = Color3.fromRGB(128, 0, 128)
-})
-
 local Section = Tab:AddSection({
 	Name = "صمله"
 })
