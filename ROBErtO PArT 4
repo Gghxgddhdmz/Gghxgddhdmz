@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Gghxgddhdmz/Orion/f00cada154844775d6c693917aa26f627b76bca0/source')))()
+local OrionLib = loadstring(game:HttpGet(('local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/kigredns/RAINBOWGUI/refs/heads/main/RAINBOLIB')))()
 local Window = OrionLib:MakeWindow({Name = "كل الي تحتاجه", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
