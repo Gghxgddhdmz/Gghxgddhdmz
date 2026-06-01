@@ -106,130 +106,6 @@ loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-v-A
 })
 
 AddButton(Main, {
-  Name = "طرق1",
-  Callback = function()
- --[[ 
-  Patch Anti-Shutdown لمدة 9000 ساعة (375 يوم)
-  يعمل في السيرفرات الخاصة فقط
---]]
-
-if not game.PrivateServerId or game.PrivateServerId == "" then
-    warn("هذا السكربت مخصص للسيرفرات الخاصة فقط.")
-    return
-end
-
-local Players = game:GetService("Players")
-local Lighting = game:GetService("Lighting")
-local CoreGui = game:GetService("CoreGui")
-local StarterGui = game:GetService("StarterGui")
-
--- حماية من الشات، التغبيش، الرسائل، الكيك
-pcall(function()
-    Lighting.Blur:Destroy()
-end)
-
-game.DescendantAdded:Connect(function(obj)
-    if obj:IsA("BlurEffect") then
-        obj:Destroy()
-    elseif obj:IsA("Message") or obj:IsA("Hint") then
-        obj:Destroy()
-    end
-end)
-
--- تعطيل الرسائل الوهمية
-StarterGui:SetCore("ResetButtonCallback", false)
-StarterGui:SetCore("DevConsoleVisible", false)
-
--- منع الكيك أو الشت داون
-local mt = getrawmetatable(game)
-setreadonly(mt, false)
-
-local old = mt.__namecall
-
-mt.__namecall = newcclosure(function(self, ...)
-    local args = {...}
-    local method = getnamecallmethod()
-
-    if method == "Kick" or method == "kick" then
-        warn("تم منع محاولة كيك.")
-        return nil
-    end
-
-    if self == game and method == "Shutdown" then
-        warn("تم منع محاولة شت داون.")
-        return nil
-    end
-
-    return old(self, unpack(args))
-end)
-
--- مؤقت 9000 ساعة (يوقف السكربت بعدها)
-task.spawn(function()
-    local totalTime = 9000 * 3600 -- 9000 ساعة
-    local start = tick()
-
-    while tick() - start < totalTime do
-        task.wait(60) -- انتظار كل دقيقة لتقليل الضغط
-    end
-
-    warn("انتهى وقت الباتش بعد 9000 ساعة، سيتم الإغلاق.")
-    game:Shutdown()
-end)
-
-print("تم تفعيل الباتش بنجاح! سيبقى شغال لمدة 9000 ساعة.")	
-    end
-})
-
-AddButton(Main, {
-  Name = "طرق 2",
-  Callback = function()
- game:GetService("NetworkClient"):SetOutgoingKBPSLimit(3000) -- تحديد حد أقل للنقل لتقليل الحمل
-
-local function getmaxvalue(val)
-    local mainvalueifonetable = 5000 -- تقليل القيمة الأساسية
-    if type(val) ~= "number" then
-        return nil
-    end
-    local calculateperfectval = (mainvalueifonetable / (val + 2))
-    return calculateperfectval
-end
-
-local function bomb(tableincrease, tries)
-    local maintable = {}
-    local spammedtable = {}
-
-    table.insert(spammedtable, {})
-    z = spammedtable[1]
-
-    for i = 1, tableincrease do
-        local tableins = {}
-        table.insert(z, tableins)
-        z = tableins
-    end
-
-    local calculatemax = getmaxvalue(tableincrease)
-    local maximum
-
-    if calculatemax then
-        maximum = calculatemax
-    else
-        maximum = 5000 -- تعديل القيمة القصوى إلى 5000
-    end
-
-    for i = 1, maximum do
-        table.insert(maintable, spammedtable)
-    end
-
-    for i = 1, tries do
-        game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
-    end
-end
-
-bomb(10, 1) -- تنفيذ العملية مرة واحدة   	
-    end
-})
-
-AddButton(Main, {
   Name = "عزف حزين",
   Callback = function()
 
@@ -318,179 +194,235 @@ end
 
 -- تشغيل السكربت
 extremeBoost()
-     end
-})
-
-local Main = MakeTab({Name ="الاوامر"})
-
-AddTextBox(Main, {
-  Name = "الـسـرعـة",
-  Default = "",
-  PlaceholderText = "ادخـل الـرقـم",
-  ClearText = true,
-  Callback = function(value)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value     
- end
-})
-AddTextBox(Main, {
-  Name = "الـقـفـز",
-  Default = "",
-  PlaceholderText = "ادخـل الـرقـم",
-  ClearText = true,
-  Callback = function(value)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = value    
-  end
-})
-AddTextBox(Main, {
-  Name = "الـشـاشـة Fov",
-  Default = "",
-  PlaceholderText = "ادخـل الـرقـم",
-  ClearText = true,
-  Callback = function(value)
-local FovNumber = value
-local Camera = workspace.CurrentCamera
-Camera.FieldOfView = FovNumber  
-  end
-})
-AddTextBox(Main, {
-  Name = "الـدوران spin",
-  Default = "",
-  PlaceholderText = "ادخـل الـرقـم",
-  ClearText = true,
-  Callback = function(Value)
-    getgenv().Spinspeed = Value
-
-local Spin = Instance.new'BodyAngularVelocity'
-Spin.Parent = game:GetService'Players'.LocalPlayer.Character:FindFirstChild'HumanoidRootPart'
-Spin.MaxTorque = Vector3.new(0, math.huge, 100)
-wait(0.1)
-Spin.AngularVelocity = Vector3.new(100,Spinspeed,0)
-  end
-})
-
-function MakeNotifi(notification)
-    game.StarterGui:SetCore("SendNotification", {
-        Title = notification.Title;
-        Text = notification.Text;
-        Duration = notification.Time;
-    })
-end
-
--- Variáveis e funções para a visualização dos jogadores
-local viewEnabled = false
-local selectedViewPlayer = nil
-local characterAddedConnection = nil
-
-local function toggleView(enabled)
-    if enabled then
-        if selectedViewPlayer then
-            local player = selectedViewPlayer
-            if player then
-                game.Workspace.CurrentCamera.CameraSubject = player.Character
-                if characterAddedConnection then
-                    characterAddedConnection:Disconnect()
-                end
-                characterAddedConnection = player.CharacterAdded:Connect(function(character)
-                    game.Workspace.CurrentCamera.CameraSubject = character
-                end)
-                MakeNotifi({
-                    Title = "Visualizando " .. player.Name,
-                    Text = "Você está visualizando o jogador: " .. player.Name,
-                    Time = 6
-                })
-            else
-                print("Jogador não encontrado.")
-                viewEnabled = false
-            end
-        else
-            print("Nenhum jogador selecionado para a visualização.")
-            viewEnabled = false
-        end
-    else
-        if characterAddedConnection then
-            characterAddedConnection:Disconnect()
-            characterAddedConnection = nil
-        end
-        game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
     end
+})
+
+AddButton(Main, {
+  Name = "عزف حزين",
+  Callback = function()
+--[[ 
+  Patch Anti-Shutdown لمدة 9000 ساعة (375 يوم)
+  يعمل في السيرفرات الخاصة فقط
+--]]
+
+if not game.PrivateServerId or game.PrivateServerId == "" then
+    warn("هذا السكربت مخصص للسيرفرات الخاصة فقط.")
+    return
 end
 
-local value = "" -- Variável para armazenar o nome digitado
+local Players = game:GetService("Players")
+local Lighting = game:GetService("Lighting")
+local CoreGui = game:GetService("CoreGui")
+local StarterGui = game:GetService("StarterGui")
 
-local function findPlayerByPartialNameOrNickname(partialName)
-    value = partialName -- Atualiza a variável com o nome digitado completo
-    for _, player in ipairs(game.Players:GetPlayers()) do
-        if player.Name:lower():find(partialName:lower(), 1, true) or (player.DisplayName and player.DisplayName:lower():find(partialName:lower(), 1, true)) then
-            return player
-        end
-    end
-    return nil
-end
+-- حماية من الشات، التغبيش، الرسائل، الكيك
+pcall(function()
+    Lighting.Blur:Destroy()
+end)
 
-
--- Conectando eventos de jogador removido
-game.Players.PlayerRemoving:Connect(function(player)
-    if selectedViewPlayer == player then
-        selectedViewPlayer = nil
-        if viewEnabled then
-            toggleView(false)
-            MakeNotifi({
-                Title = "Jogador Saiu",
-                Text = player.Name .. " saiu do jogo. Visualização desativada.",
-                Time = 5
-            })
-        end
+game.DescendantAdded:Connect(function(obj)
+    if obj:IsA("BlurEffect") then
+        obj:Destroy()
+    elseif obj:IsA("Message") or obj:IsA("Hint") then
+        obj:Destroy()
     end
 end)
 
--- Função para manter a câmera no jogador selecionado
-local function maintainView()
-    while wait() do
-        if viewEnabled and selectedViewPlayer then
-            local player = selectedViewPlayer
-            if player and game.Workspace.CurrentCamera.CameraSubject ~= player.Character then
-                game.Workspace.CurrentCamera.CameraSubject = player.Character
-            end
-        end
+-- تعطيل الرسائل الوهمية
+StarterGui:SetCore("ResetButtonCallback", false)
+StarterGui:SetCore("DevConsoleVisible", false)
+
+-- منع الكيك أو الشت داون
+local mt = getrawmetatable(game)
+setreadonly(mt, false)
+
+local old = mt.__namecall
+
+mt.__namecall = newcclosure(function(self, ...)
+    local args = {...}
+    local method = getnamecallmethod()
+
+    if method == "Kick" or method == "kick" then
+        warn("تم منع محاولة كيك.")
+        return nil
     end
+
+    if self == game and method == "Shutdown" then
+        warn("تم منع محاولة شت داون.")
+        return nil
+    end
+
+    return old(self, unpack(args))
+end)
+
+-- مؤقت 9000 ساعة (يوقف السكربت بعدها)
+task.spawn(function()
+    local totalTime = 9000 * 3600 -- 9000 ساعة
+    local start = tick()
+
+    while tick() - start < totalTime do
+        task.wait(60) -- انتظار كل دقيقة لتقليل الضغط
+    end
+
+    warn("انتهى وقت الباتش بعد 9000 ساعة، سيتم الإغلاق.")
+    game:Shutdown()
+end)
+
+print("تم تفعيل الباتش بنجاح! سيبقى شغال لمدة 9000 ساعة.")
+end    
+})
+    	end
+})
+
+
+local section = AddSection(Main, {"اوامر تجسس وتحكم بالاعب"})
+
+-- Function to get all player names
+local function getPlayerNames()
+    local playerNames = {}
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        table.insert(playerNames, player.Name)
+    end
+    return playerNames
 end
 
+-- Store selected player for later use
+local selectedPlayer = nil
+local followHead = false
+local connection = nil
 
--- Variável para controlar o estado do Noclip
-local noclipEnabled = false
-local runService = game:GetService("RunService")
-
--- Função para definir CanCollide para todas as partes do personagem
-local function setCharacterCanCollide(character, canCollide)
-    for _, part in ipairs(character:GetDescendants()) do
-        if part:IsA("BasePart") then
-            part.CanCollide = canCollide
-        end
-    end
-end
-
--- Função de callback para o botão de alternância de Noclip
-local function onNoclipToggle(value)
-    noclipEnabled = value
-    print("Noclip Enabled:", noclipEnabled)
-    
+-- Function to spectate the selected player
+local function spectatePlayer(enable)
     local player = game.Players.LocalPlayer
-    local character = player.Character
+    local camera = workspace.CurrentCamera
 
-    if noclipEnabled then
-        -- Inicia um loop para continuamente definir CanCollide
-        noclipLoop = runService.Stepped:Connect(function()
-            if character then
-                setCharacterCanCollide(character, false)
+    if selectedPlayer then
+        local targetPlayer = game.Players:FindFirstChild(selectedPlayer)
+        if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            if enable then
+                -- Set camera to follow the selected player
+                camera.CameraSubject = targetPlayer.Character.Humanoid
+            else
+                -- Reset camera to default (back to the local player)
+                camera.CameraSubject = player.Character.Humanoid
             end
-        end)
-    else
-        -- Desativa o loop e restaura CanCollide
-        if noclipLoop then
-            noclipLoop:Disconnect()
+        else
+            print("Selected player not available or out of game.")
         end
-        if character then
-            setCharacterCanCollide(character, true)
+    else
+        print("No player selected!")
+    end
+end
+
+-- Function to float just above the selected player's head without falling
+local function floatAbovePlayerHead()
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        local humanoidRootPart = character.HumanoidRootPart
+
+        if selectedPlayer then
+            local targetPlayer = game.Players:FindFirstChild(selectedPlayer)
+
+            if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("Head") then
+                local targetHead = targetPlayer.Character.Head
+
+                -- Position above the selected player's head
+                humanoidRootPart.CFrame = targetHead.CFrame * CFrame.new(0, 3, 0)
+
+                -- Keep updating the position every frame
+                connection = game:GetService("RunService").Heartbeat:Connect(function()
+                    if followHead and targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("Head") then
+                        -- Update to stay above the player's head
+                        humanoidRootPart.CFrame = targetPlayer.Character.Head.CFrame * CFrame.new(0, 3, 0)
+                    else
+                        connection:Disconnect() -- Disconnect if the toggle is off
+                    end
+                end)
+            else
+                print("Target player not found or not in the game.")
+            end
+        else
+            print("No player selected!")
         end
     end
 end
+
+-- Function to trigger the secondary script
+local function triggerCharacterSizeDown()
+    local args = {
+        [1] = "CharacterSizeDown",
+        [2] = 2.4
+    }
+    game:GetService("ReplicatedStorage").RE:FindFirstChild("1Clothe1s"):FireServer(unpack(args))
+end
+
+-- Function to teleport behind the selected player and return after 1.5 seconds
+local function moveBehindAndReturn()
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+
+    if humanoidRootPart and selectedPlayer then
+        local targetPlayer = game.Players:FindFirstChild(selectedPlayer)
+        if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            local targetHumanoidRootPart = targetPlayer.Character.HumanoidRootPart
+
+            -- Store the original position
+            local originalPosition = humanoidRootPart.CFrame
+
+            -- Move behind the selected player
+            humanoidRootPart.CFrame = targetHumanoidRootPart.CFrame * CFrame.new(0, 0, 3)
+
+            -- Wait for 1.5 seconds before returning
+            wait(1.5)
+
+            -- Return to original position
+            humanoidRootPart.CFrame = originalPosition
+        else
+            print("Selected player not found or not in the game.")
+        end
+    else
+        print("No player or HumanoidRootPart found!")
+    end
+end
+
+-- Create the dropdown with player names
+AddDropdown(Main, {
+    Name = "اختار الاعب",
+    Default = "",
+    Options = getPlayerNames(),
+    Callback = function(value)
+        selectedPlayer = value
+        print("Player selected: " .. value)
+    end    
+})
+
+AddButton(Main, {
+    Name = "تحديث القائمة",
+    Callback = function()
+        UMupdatePlayerList()
+    end    
+})
+
+local flingToggle
+
+-- Add a toggle that allows the player to spectate the selected player
+AddToggle(Main, {
+    Name = "شوف الاعب",
+    Default = false,
+    Callback = function(value)
+        spectatePlayer(value)
+    end    
+})
+
+-- Add a button to teleport to the selected player
+AddButton(Main, {
+    Name = "اذهب الى الاعب",
+    Callback = function()
+        floatAbovePlayerHead()
+    end    
+})
+
+local Main = MakeTab({Name = "تدمير"})
