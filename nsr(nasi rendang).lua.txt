@@ -28472,7 +28472,7 @@ end
 
 local uix
 uix = tbl.UIX
-uix.LIB_URL = "https://raw.githubusercontent.com/JualNasiRendang/ui/refs/heads/main/BlackUILib.lua"
+uix.LIB_URL = "https://raw.githubusercontent.com/Gghxgddhdmz/Gghxgddhdmz/refs/heads/main/BlackUILib.lua.txt"
 uix.LIB_CACHE = tbl.FS.Root .. "/BlackUILib.lua"
 
 uix.Lib = function()
